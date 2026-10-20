@@ -355,3 +355,13 @@ html::-webkit-scrollbar, body::-webkit-scrollbar { display: none; width: 0; heig
 .scroll-rail { position: relative; width: 1px; height: 32vh; background: color-mix(in oklab, currentColor 25%, transparent); }
 .scroll-rail i { position: absolute; left: -3px; width: 7px; height: 1px; background: currentColor; opacity: .4; }
 .scroll-thumb { position: absolute; left: -5px; width: 11px; height: 11px; margin-top: -5px; border: 1px solid currentColor; transform: rotate(45deg); transition: top .15s linear; }
+
+/* Editorial annotations share the existing monochrome section rhythm. */
+.editorial-strip { display: flex; align-items: baseline; gap: 32px; padding-block: 24px; border-bottom: 1px solid; border-bottom-color: inherit; font-size: 12px; line-height: 1.8; letter-spacing: 0; }
+.editorial-code { flex: none; font-size: 20px; font-weight: 500; font-variant-numeric: tabular-nums; }
+.editorial-words { display: flex; flex-wrap: wrap; gap: 10px 28px; min-width: 0; }
+.editorial-words span { display: inline-flex; align-items: baseline; gap: 10px; overflow-wrap: anywhere; }
+.editorial-words span::before { content: "+"; opacity: .4; }
+.editorial-hero { font-size: 12px; line-height: 1.8; letter-spacing: 0; }
+.editorial-hero > span:first-child { font-size: 16px; font-variant-numeric: tabular-nums; }
+@media (max-width: 639px) { .editorial-strip { flex-direction: column; gap: 12px; padding-block: 20px; } .editorial-words { gap: 10px 20px; } }

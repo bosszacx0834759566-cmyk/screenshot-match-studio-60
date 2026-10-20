@@ -96,6 +96,15 @@ function Clock() {
   return <span>{t} UTC</span>;
 }
 
+function EditorialStrip({ code, words, light = false }: { code?: string; words: string[]; light?: boolean }) {
+  return (
+    <div className={`editorial-strip reveal ${light ? "border-line-light text-ink/60" : "border-line-dark text-paper/60"}`}>
+      {code && <span className={`editorial-code ${light ? "text-ink" : "text-paper"}`}>{code}</span>}
+      <div className="editorial-words">{words.map((word) => <span key={word}>{word}</span>)}</div>
+    </div>
+  );
+}
+
 function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
   const ref = useRef<HTMLSpanElement>(null);
   const [v, setV] = useState(0);
@@ -199,6 +208,7 @@ function Index() {
 
         <div className="site-container relative z-10 pb-10 pt-32">
           <div className="mono reveal mb-10 flex flex-wrap gap-x-8 gap-y-2 text-paper/50"><span>● Link status: nominal</span><span>Lat 13.7563° N / Lon 100.5018° E</span><Clock /></div>
+          <div className="editorial-hero reveal mb-6 flex flex-wrap items-center gap-x-6 gap-y-2 text-paper/60"><span className="text-paper">16-16-16</span><span>Thailand</span><span>Space</span></div>
           <h1 className="hero-title"><Lines lines={["Bridging", <span className="hero-sub">Space  Earth.</span>]} /></h1>
           <div className="mt-14 grid gap-10 border-t border-line-dark pt-8 lg:grid-cols-12">
             <p className="body-copy reveal text-paper/60 lg:col-span-5">GodHeimer Technologies builds resilient communication infrastructure between space and Earth — designed to perform even when the environment works against it.</p>
@@ -218,6 +228,7 @@ function Index() {
       <section id="robertcore" className="section-space bg-ink">
         <div className="site-container">
           <Head n="01" title="RobertCore / The System" dark />
+          <EditorialStrip code="01-10" words={["Artificial Intelligence (AI)", "Systems Integration (SI)", "Communication", "Data"]} />
           <div className="mt-16 grid gap-16 lg:grid-cols-12">
             <div className="lg:col-span-8">
               <p className="mono reveal mb-8 text-paper/50">Resilient by design</p>
@@ -264,6 +275,7 @@ function Index() {
       <section id="adaptive" className="section-space bg-ink text-paper">
         <div className="site-container">
           <Head n="03" title="Our Philosophy" dark />
+          <EditorialStrip code="24-06" words={["Innovation", "Technology", "Engineering", "Industry"]} />
           <h2 className="display-xl mt-16 max-w-6xl"><Lines lines={["Communication", "must adapt to", <span className="hero-sub">the environment.</span>]} /></h2>
           <div className="mt-24 grid gap-10 md:grid-cols-3">
             {[["Sense", "Understand changing atmospheric conditions in real time."], ["Decide", "No single method performs under every condition."], ["Adapt", "Respond intelligently to keep the link alive."]].map(([t, d], i) => (
@@ -296,6 +308,7 @@ function Index() {
       <section id="the-name" className="section-space bg-ink text-paper">
         <div className="site-container">
           <Head n="05" title="The Name / Origin" dark />
+          <EditorialStrip words={["United States (U.S.)", "Space", "National Defense"]} />
           <div className="mt-16 grid gap-12 lg:grid-cols-12">
             <h2 className="display-xl lg:col-span-8"><Lines lines={["Two scientists.", <span className="hero-sub">One name.</span>]} /></h2>
             <p className="body-lg reveal self-end text-paper/60 lg:col-span-4">GodHeimer carries the names of two physicists — one who reached for space, one who shaped modern defense. Both sides define what we build.</p>
@@ -332,6 +345,7 @@ function Index() {
       <section id="leadership" className="section-space border-t border-line-light bg-paper text-ink">
         <div className="site-container">
           <Head n="06" title="Founder & Leadership" />
+          <EditorialStrip code="16-10" words={["Innovator", "Present", "Future"]} light />
           <div className="mt-16 grid items-end gap-10 md:grid-cols-12 md:gap-8 lg:gap-12">
             <div className="reveal founder-portrait-wrap md:col-span-5 md:row-span-2 md:self-center lg:col-span-4 lg:row-span-1 lg:self-end">
               <div className="founder-portrait">
