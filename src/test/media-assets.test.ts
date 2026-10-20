@@ -24,7 +24,7 @@ describe("media assets", () => {
     const route = readFileSync(join(__dirname, "../routes/index.tsx"), "utf8");
     expect(route.match(/src=\{issVideo.url\}/g)).toHaveLength(2);
     for (const file of legacy) expect(route).not.toContain(`@/assets/${file}`);
-    for (const name of ["restored-iss-video.mp4", "restored-goddard.jpg", "restored-oppenheimer.jpg", "restored-boss-portrait-v2.png"]) {
+    for (const name of ["restored-iss-video.mp4", "goddard-v2.jpg", "oppenheimer-v2.jpg", "restored-boss-portrait-v2.png"]) {
       expect(route).toContain(`@/assets/${name}.asset.json`);
     }
   });
