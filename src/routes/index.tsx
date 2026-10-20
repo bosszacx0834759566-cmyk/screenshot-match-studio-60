@@ -5,10 +5,10 @@ import { ArrowDown, ArrowUpRight, Plus, X } from "lucide-react";
 import { Scramble } from "@/components/Scramble";
 import { OriginPanel } from "@/components/OriginPanel";
 import { Cursor } from "@/components/Cursor";
-import issVideo from "@/assets/iss-video.mp4.asset.json";
-import goddardImg from "@/assets/goddard.jpg.asset.json";
-import oppenheimerImg from "@/assets/oppenheimer.jpg.asset.json";
-import bossPortrait from "@/assets/boss-portrait-v2.png.asset.json";
+import issVideo from "@/assets/restored-iss-video.mp4.asset.json";
+import goddardImg from "@/assets/restored-goddard.jpg.asset.json";
+import oppenheimerImg from "@/assets/restored-oppenheimer.jpg.asset.json";
+import bossPortrait from "@/assets/restored-boss-portrait-v2.png.asset.json";
 import { FOUNDER_BIRTH_ISO, FOUNDER_BIRTH_EN, founderAge } from "@/founder";
 
 const seoTitle = "GodHeimer Technologies | Space & Defense Technology from Thailand";

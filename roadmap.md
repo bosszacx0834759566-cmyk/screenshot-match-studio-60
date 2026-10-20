@@ -1,5 +1,7 @@
 # Roadmap
 
+- [ ] Recover original photos and clip into current-project assets without deleting archived pointers; verify image loading and video source.
+
 - [x] Distribute the supplied editorial keywords and four number strings across existing sections; all 19 strings verified with desktop/mobile layout checks.
 
 - [x] Give the founder portrait a gray monochrome backdrop so it fits the site's black-and-white tone, while the photo itself stays in natural color. Checked on desktop and mobile in the browser.
