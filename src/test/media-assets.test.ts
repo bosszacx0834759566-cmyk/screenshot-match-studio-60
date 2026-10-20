@@ -4,8 +4,8 @@ import { join } from "node:path";
 
 const PROJECT_ID = "8fc69c82-9498-4b5c-98c9-5fd16ee9fc19";
 const dir = join(__dirname, "../assets");
-const required = ["restored-iss-video.mp4", "restored-goddard.jpg", "restored-oppenheimer.jpg", "restored-boss.png", "restored-boss-portrait.png", "restored-boss-portrait-v2.png"];
-const legacy = new Set(["iss-video.mp4.asset.json", "goddard.jpg.asset.json", "oppenheimer.jpg.asset.json", "boss.png.asset.json", "boss-portrait.png.asset.json", "boss-portrait-v2.png.asset.json"]);
+const required = ["restored-iss-video.mp4", "goddard-v2.jpg", "oppenheimer-v2.jpg", "restored-boss.png", "restored-boss-portrait.png", "restored-boss-portrait-v2.png"];
+const legacy = new Set(["iss-video.mp4.asset.json", "goddard.jpg.asset.json", "oppenheimer.jpg.asset.json", "boss.png.asset.json", "boss-portrait.png.asset.json", "boss-portrait-v2.png.asset.json", "restored-goddard.jpg.asset.json", "restored-oppenheimer.jpg.asset.json"]);
 
 describe("media assets", () => {
   for (const name of required) {
