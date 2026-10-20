@@ -15,3 +15,5 @@
 - Media (video/photos) must be stored as current-project Lovable Assets pointers in src/assets/*.asset.json; never delete or replace them, never point at another project's assets. Why: other projects' or temp files vanish after publish. Guarded by src/test/media-assets.test.ts.
 
 - Founder birth data (date, age calculation, Thai/English labels) lives in src/founder.ts and is rendered from there; never duplicate it inline in routes. Why: one source keeps the page, the SEO schema, and src/test/founder-age.test.ts in step.
+
+- Decorative section keywords and codes use the shared EditorialStrip presentation with semantic colors and wrapping styles; why: annotations stay consistent across dark/light sections and small screens without changing factual content.
