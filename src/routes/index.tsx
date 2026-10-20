@@ -166,8 +166,8 @@ function Index() {
       <header className={`site-header ${hide ? "hide" : ""}`}>
         <div className="site-container flex h-20 items-center justify-between gap-6">
           <a href="#top" aria-label="GodHeimer home" className="flex items-center gap-3"><Logo className="h-7 w-7" /><span className="brand text-xs font-bold">GODHEIMER</span></a>
-          <nav aria-label="Main navigation" className="mono hidden items-center gap-10 lg:flex">
-            {nav.slice(0, 4).map(([l, id]) => <a key={id} href={`#${id}`} className="u-link"><Scramble text={l} /></a>)}
+          <nav aria-label="Main navigation" className="mono hidden items-center gap-6 xl:gap-8 lg:flex">
+            {nav.filter(([, id]) => id !== "contact").map(([l, id]) => <a key={id} href={`#${id}`} className="u-link"><Scramble text={l} /></a>)}
           </nav>
           <div className="flex items-center gap-6">
             <a href="#contact" className="mono u-link hidden sm:inline-flex"><Scramble text="Contact" /> <ArrowUpRight className="h-3.5 w-3.5" /></a>
